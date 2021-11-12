@@ -3,27 +3,8 @@
 """
 Created on Fri Nov  5 14:03:12 2021
 
-@author: zhanglingxiao
+@author: Paul Petersik, zhanglingxiao
 """
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-arr = np.zeros((50,50))
-
-"""
-0:
-1:
-2:
-3:
-4:       
-"""
-
-arr[20:30,20:30] = 2
-
-for i in range(50):
-    for j in range(50):
-        print(i,j)
 
 """
 0: Susceptible
@@ -46,7 +27,7 @@ arr[20:25, 20:25] = 2
 for t in range(100):
     plt.matshow(arr, vmin=0, vmax=3)
     plt.colorbar()
-    plt.savefig(f"test{t}.png")
+#    plt.savefig(f"test{t}.png")
 
 
 
@@ -81,12 +62,13 @@ if arr[i, j] == 0 and arr[ni, nj] == 2:
 
 
 elif arr[i, j] == 2:
-    arr[i, j] = np.random.choice([2, 3], p=[0.9, 0.1])
+    arr[i, j] = np.random.choice([2, 3], p=[0.5, 0.5])
 
 
 
-# plt.savefig("test.png")
-        
+plt.savefig("test.png")
+
+
         
         
 
